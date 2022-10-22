@@ -1,0 +1,9 @@
+FROM python:3.9-slim
+RUN apt-get update && apt-get upgrade
+
+COPY  requirements.txt
+RUN pip isntall -r requirements.txt
+
+ADD ../students
+
+CMD 
